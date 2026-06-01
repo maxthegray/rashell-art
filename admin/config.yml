@@ -1,0 +1,35 @@
+# RaShell Art — CMS configuration
+# Works with both Sveltia CMS and Decap CMS (same format).
+
+backend:
+  name: github
+  repo: maxthegray/rashell-art        # <-- CHANGE to your GitHub username/repo
+  branch: main                        # <-- the branch the site deploys from
+  # The Cloudflare Worker that handles "Sign in with GitHub" (see SETUP.md).
+  # Leave commented out if you host on Netlify and use Netlify's OAuth.
+  base_url: https://sveltia-cms-auth.YOUR-SUBDOMAIN.workers.dev   # <-- CHANGE
+
+# Where uploaded images are saved in the repo, and the path written into the data.
+media_folder: "images/gallery"
+public_folder: "images/gallery"
+
+collections:
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - name: "artworks"
+        label: "Artworks"
+        file: "artworks.json"
+        editor:
+          preview: false
+        fields:
+          - name: "artworks"
+            label: "Artworks"
+            label_singular: "Artwork"
+            widget: "list"
+            # Each card in the editor shows the title and size at a glance:
+            summary: "{{fields.title}}{{#if fields.size}} — {{fields.size}}{{/if}}"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "size",  label: "Size",  widget: "string", required: false, hint: 'e.g.  24" x 26"' }
+              - { name: "file",  label: "Image", widget: "image" }
