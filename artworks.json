@@ -551,6 +551,18 @@
       "size": "23\" x 26\"",
       "file": "images/gallery/Pink_Vase_2.jpg",
       "thumb": "images/gallery/thumbs/Pink_Vase_2.jpg"
+    },
+    {
+      "title": "Nature Mort",
+      "size": "24\" x 25\"",
+      "file": "images/gallery/NatureMort2.jpg",
+      "thumb": "images/gallery/thumbs/NatureMort2.jpg"
+    },
+    {
+      "title": "On My Wall",
+      "size": "24\" x 25\"",
+      "file": "images/gallery/OnMyWall.jpg",
+      "thumb": "images/gallery/thumbs/OnMyWall.jpg"
     }
   ]
 }
