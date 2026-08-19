@@ -1,20 +1,7 @@
-/* =====================================================================
-   RaShell Art — Gallery
-   =====================================================================
-   The list of pictures now lives in  artworks.json  and is edited two ways:
-
-     • Rachel (no code):  go to  yoursite.com/admin  and use the visual editor.
-     • Max (code):        edit  artworks.json  directly and push to GitHub.
-
-   Either way the grid and the pop-up viewer below rebuild themselves.
-   You do not need to edit this file to add or remove pictures.
-   ===================================================================== */
-
 (async function () {
   const grid = document.getElementById("gallery");
   if (!grid) return;
 
-  // Load the picture list (edited via /admin or directly in artworks.json)
   let ARTWORKS = [];
   try {
     const res = await fetch("artworks.json", { cache: "no-cache" });
@@ -64,7 +51,7 @@
     grid.appendChild(item);
   });
 
-  // ---- Lightbox (replaces the old Highslide plugin) ----
+  // ---- Lightbox ----
   let current = 0;
   const box = document.createElement("div");
   box.className = "lightbox";
