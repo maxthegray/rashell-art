@@ -563,6 +563,12 @@
       "size": "24\" x 25\"",
       "file": "images/gallery/OnMyWall.jpg",
       "thumb": "images/gallery/thumbs/OnMyWall.jpg"
+    },
+    {
+      "title": "Still Life",
+      "size": "24\" x 25\"",
+      "file": "images/gallery/StillLife.jpg",
+      "thumb": "images/gallery/thumbs/StillLife.jpg"
     }
   ]
 }
